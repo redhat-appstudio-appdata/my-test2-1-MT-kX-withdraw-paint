@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: my-test2-antk
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/mkosiarc-tenant/my-test2-1/my-test2-antk@sha256:7f01c83e6cce875c6c552851cbb59dfdca8861fb41fffffbe9f39f1d8bbb283f
+        name: container-image
+        resources: {}
+status: {}

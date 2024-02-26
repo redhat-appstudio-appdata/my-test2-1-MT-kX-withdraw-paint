@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: my-test2-antk
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: my-test2-antk
+    app.kubernetes.io/part-of: my-test2-1
+  name: my-test2-antkolpb
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: my-test2-antk
+    weight: 100
+status: {}
